@@ -1,0 +1,21 @@
+.container{
+    max-width: 1200px;
+    margin: 2.25rem auto;
+}
+
+.brandContainer{
+    display: flex;
+    gap: 1rem;
+    overflow: auto;
+    scrollbar-width: none;
+    padding: 1rem;
+    flex-shrink: 0;
+}
+
+.brandContainer *{
+    flex-shrink: 0;
+}
+
+.brandContainer::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    width: 100%;
+    padding: 0 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container div{
+    display: flex;
+    flex-direction: column;
+}
+
+.container p {
+    font-size: 14px;
+    color: var(--black);
+}
+
+.container h2{
+    font-size: 24px;
+    color: var(--black);
+    font-weight: 500;
+}
+
+.container span{
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 500;
+}

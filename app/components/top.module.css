@@ -1,0 +1,23 @@
+.container{
+    width: 100%;
+    background-color: var(--main-color);
+    color: var(--white);
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.container p{
+    margin: auto;
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 2%;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .container{
+        height: 50px;
+    }
+}
