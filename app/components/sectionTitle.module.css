@@ -13,17 +13,23 @@
 
 .container p {
     font-size: 14px;
-    color: var(--black);
+    color: #6a6a6a;
 }
 
 .container h2{
-    font-size: 24px;
+    font-size: 18px;
     color: var(--black);
     font-weight: 500;
 }
 
 .container span{
     text-decoration: underline;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
+}
+
+@media (min-width: 768px) {
+    .container h2{
+        font-size: 24px;
+    }
 }

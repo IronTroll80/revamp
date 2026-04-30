@@ -11,6 +11,8 @@ export default function Header (){
                      "Artisan Ciders", "Champagnes", "Cognac & Fine Brandys", 
                      "Bundles", "Explore" ]
 
+    const mobileNav = ['Your Returns and Orders', 'Login / Create Account', 'Cart']
+
     const [navOpen, setNavOpen]= useState(false)
     return (
         <>
@@ -58,7 +60,7 @@ export default function Header (){
                 {navOpen && 
                     <div className={styles.mobileNav}>
                             <ul className={styles.navList}>
-                                {navItems.map((item, index) => (
+                                {mobileNav.map((item, index) => (
                                     <li key={index} className={styles.navItem}>{item}</li>
                                 ))}
                             </ul>
