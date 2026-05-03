@@ -1,14 +1,14 @@
 import Footer from "../components/footer";
 import Header from "../components/header";
-import LoginContent from "../components/loginContent";
+import SignUpContent from "../components/signUpContent";
 import Top from "../components/top";
 
-export default function Login (){
+export default function SignUp (){
     return (
         <>
         <Top />
         <Header />
-        <LoginContent />
+        <SignUpContent />
         <Footer />
         </>
     )

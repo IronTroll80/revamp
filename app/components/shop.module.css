@@ -1,0 +1,160 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.container h3{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: var(--black);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container h3 span{
+    color: var(--black);
+    font-size: 1.25rem;
+    background-color: var(--gray);
+    padding: .4rem;
+    border-radius: .5rem;
+}
+
+.subtitle{
+    font-size: 14px;
+    color: var(--black);
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+.mainContent{
+    display: flex;
+    width: 100%;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.left{
+    width: 25%;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}  
+
+.left h4{
+    font-size: 24px;
+    color: var(--black);
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.container hr{
+    border-color: var(--gray)
+}
+
+.filterGroup{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 14px;
+}
+
+.filterTitle{
+    color: var(--dark-gray);
+    font-weight: 600;
+}
+
+.filterItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.productContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+    width: 100%;
+}
+
+.left{
+    display: none
+}
+
+.sidebar{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #00000040;
+}
+
+.sidebarContent{
+    padding: 1rem;
+    background-color: var(--white);
+    width: 80%;
+    max-width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    };
+
+    to{
+        transform: translateX(0);
+    }
+}
+
+.sidebarContent h4{
+    font-size: 24px;
+    color: var(--black);
+    font-weight: 600;
+    margin-bottom: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebarContent hr{
+    border-color: var(--gray);
+    font-weight: 600;
+}
+
+
+
+@media (min-width: 768px) {
+    .productContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px){
+    .left{
+        display: flex;
+    }
+
+    .container h3, .subtitle{
+        text-align: center;
+        display: block;
+    }
+
+    .container h3 span{
+        display: none;
+    }
+}
