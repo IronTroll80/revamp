@@ -1,7 +1,6 @@
 .container{
     display: flex;
     width: 100%;
-    padding: 0 1rem;
     justify-content: space-between;
     align-items: center;
 }
@@ -27,6 +26,12 @@
     font-size: 12px;
     font-weight: 500;
 }
+
+.container b{
+    color: var(--main-color);
+    font-weight: 500;
+}
+
 
 @media (min-width: 768px) {
     .container h2{

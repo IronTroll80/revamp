@@ -1,0 +1,257 @@
+.container{
+    max-width: 1200px;
+    margin: auto;
+    min-height: 50vh;
+}
+
+.productDetails{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.route{
+    padding: 1rem;
+    font-size: 12px;
+}
+
+.route span{
+    color: var(--main-color);
+    font-weight: 500;
+}
+
+.imageSection {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 4/3;
+    background-color: var(--gray);
+    margin-top: 1rem;
+}
+
+.infoSection{
+    display: flex;
+    flex-direction: column;
+}
+
+.category{
+    padding: .35rem .7rem;
+    font-size: 12px;
+    color: var(--main-color);
+    background-color: #cc22285d;
+    border-radius: .2rem;
+    width: fit-content;
+    margin-top: 1rem;
+}
+
+.name{
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: .5rem;
+}
+
+.price{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.descriptionTitle{
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.description{
+    font-size: 14px;
+    margin-top: .25rem;
+}
+
+.sizeOptions{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 14px;
+    margin: 1rem 0;
+}
+
+.sizes{
+    display: flex;
+    gap: .5rem;
+}
+
+.sizeButton{
+    color: var(--main-color);
+    background-color: var(--gray);
+    padding: .35rem .7rem;
+    font-size: 12px;
+    border-radius: .25rem;
+}
+
+.addToCartButton{
+    width: 100%;
+    height: 50px;
+    border-radius: .25rem;
+    font-size: 14px;
+    background-color: var(--main-color);
+    color: var(--white);
+    max-width: 300px;
+    cursor: pointer;
+}
+
+.addInfo{
+    display: flex;
+    align-items: center;
+    color: var(--dark-gray);
+    font-size: 14px;
+    margin-top: .5rem;
+    gap: .25rem;
+    cursor: pointer;
+}
+
+.addInfo:hover{
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+.productContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    width: 100%;
+    margin-top: 1rem;
+
+}
+
+.productBlog{
+    width: 100%;
+    min-height: 920px;
+    height: fit-content;
+    background-color: var(--black);
+}
+
+.productBlogContainer{
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.sectionTitle{
+    display: flex;
+    width: 100%;
+    padding: 0 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+    color: var(--white)
+}
+
+.sectionTitle div{
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionTitle p {
+    font-size: 14px;
+    color: #6a6a6a;
+}
+
+.sectionTitle h2{
+    font-size: 18px;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.sectionTitle span{
+    text-decoration: underline;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.blogSection{
+    padding: 1rem;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 2rem;
+}
+
+.blog{
+    width: 92%;
+    max-width: 370px;
+    cursor: pointer;
+    margin: auto;
+}
+
+.imageContainer{
+    width: 100%;
+    height: 211px;
+    background-color: #6a6a6a;
+    border-radius: .5rem;
+}
+
+.tag{
+    font-size: 12px;
+    color: var(--main-color);
+    margin-top: .5rem;
+}
+
+.title{
+    font-size: 16px;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.blogDescription{
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.meta{
+    font-size: 12px;
+    margin-top: .5rem;
+    color: #6a6a6a;
+}
+
+@media (min-width: 768px) {
+    .sectionTitle h2{
+        font-size: 24px;
+    }
+
+    .blogSection{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .blogSection{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media (min-width: 768px) {
+
+    .route{
+        padding: 0 1rem;
+    }
+
+    .productDetails{
+        flex-direction: row;
+        gap: 3rem;
+        padding: 0 1rem;
+    }
+
+     .productContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .productContainer{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
