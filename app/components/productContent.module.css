@@ -14,8 +14,10 @@
 }
 
 .route{
-    padding: 1rem;
     font-size: 12px;
+    margin-bottom: -1rem;
+    margin-top: 1rem;
+    padding: 0 1rem;
 }
 
 .route span{
@@ -115,18 +117,22 @@
     text-decoration: underline;
 }
 
+.similarProducts{
+    width: 100%;
+    padding: 1rem;
+    margin: 2rem 0;
+}
+
 .productContainer{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
     width: 100%;
     margin-top: 1rem;
-
 }
 
 .productBlog{
     width: 100%;
-    min-height: 920px;
     height: fit-content;
     background-color: var(--black);
 }
@@ -172,7 +178,7 @@
 
 .blogSection{
     padding: 1rem;
-    margin-top: 2rem;
+    margin: 2rem 0;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     row-gap: 2rem;
@@ -183,6 +189,7 @@
     max-width: 370px;
     cursor: pointer;
     margin: auto;
+    height: fit-content;
 }
 
 .imageContainer{
@@ -235,7 +242,7 @@
 @media (min-width: 768px) {
 
     .route{
-        padding: 0 1rem;
+        padding: .5rem 1rem;
     }
 
     .productDetails{
