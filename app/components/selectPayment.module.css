@@ -1,0 +1,122 @@
+
+.checkoutItem{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f6f6f6;
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    border-radius: .5rem;
+    gap: 2rem;
+}
+
+.checkoutItemDetails span{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: .5rem
+}
+
+.checkoutItemDetails  svg{
+    color: var(--main-color)
+}
+
+.checkoutItemDetails p {
+    font-size: 14px;
+    font-weight: 500;
+    max-width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.checkoutItemButton{
+    background-color: var(--main-color);
+    color: var(--white);
+    border-radius: .25rem;
+    font-size: 14px;
+    padding: .35rem .7rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+.checkoutItemButton:hover{
+    background-color: #a81d22;
+}
+
+.itemModal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemModalContent{
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: .5rem;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.itemModalContent h3{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.paymentOption{
+    display: flex;
+    gap: .5rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    justify-content: space-between;
+    border: 1px solid var(--gray);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.paymentOption span{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 14px;
+}
+
+.paymentOption p{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.modalActions{
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    font-size: 14px;
+}
+
+.cancelButton{
+    background-color: var(--gray);
+    color: var(--dark-gray);
+    padding: .35rem .7rem;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+.confirmButton{
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: .35rem .7rem;
+    border-radius: .25rem;
+    cursor: pointer;
+}
