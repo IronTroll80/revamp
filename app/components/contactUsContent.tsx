@@ -7,13 +7,15 @@ export default function ContactUsContent (){
         <>
         
         <div className= {styles.container}>
-            <h3>Contact Us </h3>
-            <p>Reach Out to us through any of our contacts</p>
+            <h3 className= {styles.title}>Contact Us </h3>
+            <p className= {styles.subtitle}>Reach Out to us through any of our contacts</p>
 
             <div className= {styles.content}>
                 <div className= {styles.left}>
-                    <h3 className= {styles.contentTitle}>Contact Information</h3>
-                    <p>Say something to start chatting with us!</p>
+                    <div>
+                        <h3 className= {styles.contentTitle}>Contact Information</h3>
+                        <p className= {styles.contentSubtitle}>Say something to start chatting with us!</p>
+                    </div>
 
                     <div className= {styles.contactItems}>
                         <p> <LuPhone/> +234 904 566 5727</p>
@@ -51,7 +53,7 @@ export default function ContactUsContent (){
                         <textarea name="message"></textarea> 
                     </div>
                     <div className= {styles.map}>
-                        
+
                     </div>
                 </div>
             </div>

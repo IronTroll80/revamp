@@ -159,7 +159,7 @@ export default function CartContent() {
           </div>
             </div>
             <div className= {styles.right}>
-                <AddLocation />
+                <AddLocation state='default' />
                 <SelectPayment/>
                 <PromotionCart />
                 <div className={styles.summary}>

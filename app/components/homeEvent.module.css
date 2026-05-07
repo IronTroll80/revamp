@@ -1,17 +1,17 @@
 .container{
     max-width: 1200px;
     margin: 2.25rem auto;
-   
+    padding: 1rem;
 }
 
 .eventSection{
-    padding: 1rem;
     display: flex; 
     overflow: auto;
     gap: 1rem;
     scrollbar-width: none;
     scroll-snap-type: mandatory;
     scroll-snap-align: 1;
+    margin-top: 1rem;
 }
 
 .eventSection::-webkit-scrollbar{

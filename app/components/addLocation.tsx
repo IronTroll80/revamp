@@ -4,9 +4,13 @@ import { LuMapPin, LuPlus } from 'react-icons/lu';
 import styles from './addLocation.module.css';
 import { useState } from 'react';
 
-export default function AddLocation() {
+interface Props {
+    state: string;
+}
 
-    const [active, setActive] = useState('default')
+export default function AddLocation({state}: Props) {
+
+    const [active, setActive] = useState(state)
 
     return(
          <div className= {styles.checkoutItem}>

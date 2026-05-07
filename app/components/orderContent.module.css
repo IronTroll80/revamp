@@ -1,0 +1,426 @@
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1.5rem 1rem;
+    min-height: 55vh;
+}
+
+.header {
+    margin-bottom: 1.25rem;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111;
+}
+
+.subtitle {
+    font-size: 13px;
+    color: #999;
+    margin-top: 0.2rem;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.filterBtn {
+    padding: 0.35rem 0.9rem;
+    border-radius: .25rem;
+    border: 1px solid #f2f2f2;
+    background: #fff;
+    color: #666;
+    font-size: 13px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.filterBtn:hover {
+    border-color: var(--main-coloor);
+    color: var(--main-coloor);
+}
+
+.filterBtnActive {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    color: #fff;
+}
+
+.filterBtnActive:hover {
+    color: #fff;
+    opacity: 0.9;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.orderCard {
+    padding: 1rem 1.1rem;
+    border: 1px solid #f2f2f2;
+    border-radius: .25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    cursor: pointer;
+    transition: border-color 0.15s ease;
+}
+
+.orderCard:hover {
+    border-color: #ccc;
+}
+
+.orderCardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.orderLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 0;
+}
+
+.orderId {
+    font-size: 14px;
+    color: #111;
+}
+
+.orderId span {
+    font-weight: 600;
+}
+
+.orderDate {
+    font-size: 12px;
+    color: #999;
+}
+
+.orderRight {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.15rem;
+    flex-shrink: 0;
+}
+
+.orderTotalLabel {
+    font-size: 11px;
+    color: #999;
+}
+
+.orderAmount {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+}
+
+.badge {
+    width: fit-content;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.badgeDelivered {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.badgePending {
+    background-color: #fff8e1;
+    color: #f57f17;
+}
+
+.badgeCancelled {
+    background-color: #fce4ec;
+    color: #c62828;
+}
+
+.badgeProcessing {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+.chevron {
+    color: #ccc;
+}
+
+.empty {
+    padding: 2.5rem 1rem;
+    text-align: center;
+    color: #bbb;
+    font-size: 13px;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.45);
+    animation: fadeIn 0.18s ease;
+}
+
+.modal {
+    width: 100%;
+    max-width: 560px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 16px 16px 0 0;
+    animation: slideUp 0.25s ease;
+}
+
+.modalTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+}
+
+.modalTitle {
+    font-size: 17px;
+    font-weight: 600;
+    color: #111;
+}
+
+.modalOrderId {
+    margin-top: 0.2rem;
+    font-size: 12px;
+    color: #999;
+}
+
+.closeBtn {
+    padding: 0;
+    border: none;
+    background: none;
+    color: #aaa;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.15s ease;
+}
+
+.closeBtn:hover {
+    color: #111;
+}
+
+.divider {
+    height: 1px;
+    margin: 1rem 0;
+    background: #f0f0f0;
+}
+
+.section {
+    margin-bottom: 1.25rem;
+}
+
+.sectionLabel {
+    margin-bottom: 0.65rem;
+    font-size: 11px;
+    font-weight: 600;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+.infoGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.infoItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.infoKey {
+    font-size: 12px;
+    color: #999;
+}
+
+.infoVal {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+}
+
+.itemsList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.lineItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.lineItemName {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lineItemQty {
+    padding: 0.1rem 0.45rem;
+    border-radius: 4px;
+    background: #f5f5f5;
+    color: #999;
+    font-size: 12px;
+}
+
+.lineItemPrice {
+    font-weight: 500;
+    color: #111;
+}
+
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.totalLabel {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+}
+
+.totalAmount {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--main-coloor);
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+}
+
+.timelineItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+}
+
+.timelineDotWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timelineDot {
+    width: 10px;
+    height: 10px;
+    margin-top: 4px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    flex-shrink: 0;
+}
+
+.timelineDotActive {
+    background: var(--main-coloor);
+}
+
+.timelineLine {
+    width: 1px;
+    flex: 1;
+    min-height: 24px;
+    margin: 3px 0;
+    background: #ebebeb;
+}
+
+.timelineContent {
+    padding-bottom: 1.1rem;
+}
+
+.timelineStatus {
+    font-size: 13px;
+    font-weight: 500;
+    color: #111;
+}
+
+.timelineDate {
+    margin-top: 0.1rem;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.reorderBtn {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.85rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--main-coloor);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.reorderBtn:hover {
+    opacity: 0.88;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 2rem;
+    }
+
+    .overlay {
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .modal {
+        border-radius: 14px;
+    }
+}

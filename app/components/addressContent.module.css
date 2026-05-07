@@ -1,0 +1,291 @@
+.container {
+    max-width: 500px;
+    padding: 1.5rem 1rem;
+    margin: 2rem auto;
+}
+
+.header {
+    margin-bottom: 1.25rem;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #111;
+}
+
+.subtitle {
+    font-size: 13px;
+    color: #999;
+    margin-top: 0.2rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.addressCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #f6f6f6;
+    border-radius: .5rem;
+    gap: 2rem;
+}
+
+.addressDetails span {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: .5rem;
+}
+
+.addressDetails svg {
+    color: var(--main-coloor);
+}
+
+.addressDetails p {
+    font-size: 14px;
+    font-weight: 400;
+    max-width: 160px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.defaultTag {
+    font-size: 10px;
+    font-weight: 400;
+    background: #f8d9d9;
+    color: var(--main-coloor);
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+}
+
+.deleteBtn {
+    background: none;
+    border: none;
+    font-size: 13px;
+    color: #e53935;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0;
+    transition: color 0.15s ease;
+}
+
+.deleteBtn:hover {
+    color: #c62828;
+}
+
+.addBtn {
+    background-color: #f8d9d9;
+    color: var(--main-coloor);
+    border-radius: .25rem;
+    font-size: 14px;
+    padding: .35rem .7rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-weight: 500;
+    border: none;
+    font-family: inherit;
+    margin-top: 1rem;
+}
+
+.addBtn:hover {
+    background-color: #f5c6c6;
+}
+
+.itemModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.itemModalContent {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: .5rem;
+    width: 90%;
+    max-width: 500px;
+}
+
+.itemModalContent h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.locationOption {
+    display: flex;
+    gap: .5rem;
+    margin: .75rem 0;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.locationOption span {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 14px;
+    color: #888;
+}
+
+.locationOption span svg {
+    color: var(--main-coloor);
+}
+
+.locationOption p {
+    font-size: 14px;
+    font-weight: 500;
+    max-width: 200px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.locationOption input[type='radio'] {
+    accent-color: var(--main-coloor);
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.addLocationButton {
+    background-color: #f8d9d9;
+    color: var(--main-coloor);
+    border-radius: .25rem;
+    font-size: 14px;
+    padding: .35rem .7rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-weight: 500;
+    border: none;
+    font-family: inherit;
+    margin-top: 0.5rem;
+}
+
+.modalActions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    font-size: 14px;
+}
+
+.cancelButton {
+    background-color: #f0f0f0;
+    color: #555;
+    padding: .35rem .7rem;
+    border-radius: .25rem;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+}
+
+.cancelButton:hover {
+    background-color: #e0e0e0;
+}
+
+.confirmButton {
+    background-color: var(--main-coloor);
+    color: #fff;
+    padding: .35rem .7rem;
+    border-radius: .25rem;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+}
+
+.confirmButton:hover {
+    background-color: #a81d22;
+}
+
+.addLocationModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.addLocationModalContent {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: .5rem;
+    width: 90%;
+    max-width: 500px;
+}
+
+.addLocationModalContent h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.addLocationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.map {
+    width: 100%;
+    height: 200px;
+    background-color: #f0f0f0;
+    border-radius: .5rem;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.address input {
+    padding: .6rem 1rem;
+    border-radius: .25rem;
+    background: #f6f6f6;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    font-family: inherit;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.address input:focus {
+    border-color: var(--main-coloor);
+    background: #fff;
+}
+
+.empty {
+    font-size: 13px;
+    color: #bbb;
+    padding: 2rem 0;
+    text-align: center;
+}
