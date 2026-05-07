@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from './header.module.css'
 import { LuSearch, LuShoppingCart, LuChevronDown  } from 'react-icons/lu'
 import { useState } from 'react'
+import Link from 'next/link'
 
 export default function Header (){
 
@@ -36,15 +37,21 @@ export default function Header (){
                         </div>
                     <div className= {styles.buttonContainer}>
                         <div className= {styles.link}>
-                            <p>Your Returns</p>
-                            <h3>& Orders</h3>
+                            <Link href={'/orders'}> 
+                                <p>Your Returns</p>
+                                <h3>& Orders</h3>
+                            </Link>
                         </div>
                         <div className= {styles.link}>
+                            <Link href={'/login'}> 
                             <p>Nice to meet you!</p>
                             <h3>Login/Create an account</h3>
+                            </Link>
                         </div>
                         <div className = {styles.cart}>
+                            <Link href={'/cart'}> 
                             <span><LuShoppingCart /></span>
+                            </Link>
                         </div>
                     </div>
                     
@@ -53,7 +60,9 @@ export default function Header (){
             <div className={styles.desktopNav}>
                 <ul className={styles.desktopNavList}>
                     {navItems.map((item, index) => (
-                        <li key={index} className={styles.navItem}>{item} <LuChevronDown /> </li>
+                        <Link href={'/marketplace'}>
+                            <li key={index} className={styles.navItem}>{item} <LuChevronDown /> </li>
+                        </Link>
                     ))}
                 </ul>
             </div>
@@ -61,7 +70,9 @@ export default function Header (){
                     <div className={styles.mobileNav}>
                             <ul className={styles.navList}>
                                 {mobileNav.map((item, index) => (
-                                    <li key={index} className={styles.navItem}>{item}</li>
+                                    <Link href={'/marketplace'}>
+                                        <li key={index} className={styles.navItem}>{item}</li>
+                                    </Link>
                                 ))}
                             </ul>
                         </div>

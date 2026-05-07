@@ -8,7 +8,7 @@ export default function Topselling() {
         <>
 
         <div className = {styles.container}>
-            <SectionTitle title="Top Selling products" description = "Hot and Selling" link = '/products' />
+            <SectionTitle title="Top Selling products" description = "Hot and Selling" link = '/marketplace' />
             <div className = {styles.productContainer}>
                 {Array.from({ length: 10 }, (_, i) => (
                     <ProductCard key={i} />

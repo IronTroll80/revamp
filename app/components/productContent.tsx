@@ -52,7 +52,7 @@ export default function ProductContent() {
                     </div>
                 </div>
                 <div className= {styles.similarProducts}>
-                    <SectionTitle title="See Similar products" description = "Fan of" link = '/products'  bold = '4th Street Sweet Red Wine?'/>
+                    <SectionTitle title="See Similar products" description = "Fan of" link = '/marketplace'  bold = '4th Street Sweet Red Wine?'/>
                         <div className = {styles.productContainer}>
                             {Array.from({ length: 4 }, (_, i) => (
                             <ProductCard key={i} />

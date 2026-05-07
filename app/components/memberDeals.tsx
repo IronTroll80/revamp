@@ -8,7 +8,7 @@ export default function MemberDeals() {
         <>
 
         <div className = {styles.container}>
-            <SectionTitle title="Our Member Deals" description = "Join the club today" link = '/products' />
+            <SectionTitle title="Our Member Deals" description = "Join the club today" link = '/marketplace' />
             <div className = {styles.productContainer}>
                 {Array.from({ length: 10 }, (_, i) => (
                     <ProductCard key={i} />

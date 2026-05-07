@@ -43,7 +43,7 @@ export default function LatestProducts() {
         <>
         
         <div className= {styles.container}>
-            <SectionTitle title="New In the Marketplace" description = "Latest to Hit the Market" link = '/products' />
+            <SectionTitle title="New In the Marketplace" description = "Latest to Hit the Market" link = '/marketplace' />
             <div className={styles.latestProductGrid}>
                 {products.map(product => (
                     <div key={product.id} className={styles.product}>

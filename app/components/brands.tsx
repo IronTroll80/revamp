@@ -10,7 +10,7 @@ return(
     <>
     
     <div className = {styles.container}>
-        <SectionTitle title = "Quicklie is the Official Distributor of over 50+ Brands " description = "" link = '/products' />
+        <SectionTitle title = "Quicklie is the Official Distributor of over 50+ Brands " description = "" link = '/marketplace' />
         <div className= {styles.brandContainer}>
             {Array.from({ length: brands }, (_, i) => (
                 <div key={i}>
