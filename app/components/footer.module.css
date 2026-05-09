@@ -5,7 +5,6 @@
   background-color: #1a1a1a;
   color: #f5f5f5;
   padding: 2rem 2rem;
-  font-family: 'Inter', sans-serif;
 }
 
 .column {
@@ -22,7 +21,7 @@
 }
 
 .column p{
-  font-size: .8rem;
+  font-size: 14px;
 }
 
 .column ul {
@@ -39,7 +38,7 @@
   text-decoration: none;
   color: #ccc;
   transition: color 0.3s ease;
-  font-size: .7rem;
+  font-size: 14px;
 }
 
 .column a:hover {

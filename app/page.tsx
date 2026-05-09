@@ -25,7 +25,7 @@ export default function Page() {
         <Brands/>
         <MemberHome />
         <MemberDeals />
-        <HomeEvent />
+        <HomeEvent showTitle = {true}/>
         <HomeBlog />
         <Footer/>
         </>

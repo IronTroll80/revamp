@@ -5,7 +5,7 @@ import styles from './profileContent.module.css'
 import {
     LuUser, LuShoppingBag, LuMapPin,
     LuTag, LuLogOut, LuChevronRight,
-    LuMessageCircleQuestion
+    LuMessageCircleQuestion,
 } from 'react-icons/lu'
 import { useState } from 'react';
 
@@ -40,6 +40,13 @@ const navItems = [
         label: 'Help and Support',
         key: 'help',
         address: '/contact-us',
+        badge: '3',
+    },
+    {
+        icon: LuTag,
+        label: 'Membership',
+        key: 'premium',
+        address: '/membership',
         badge: '3',
     },
 ]

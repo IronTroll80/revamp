@@ -4,7 +4,6 @@
     box-sizing: border-box;
     background-color: #ffffff;
     max-width: 1200px;
-    margin: auto;
 }
 
 .title {
@@ -290,6 +289,7 @@
 @media (min-width: 768px) {
     .wrapper {
         padding: 2rem;
+        margin: 2rem auto;
     }
 
     .grid {

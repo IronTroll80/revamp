@@ -12,7 +12,13 @@ export default function Header (){
                      "Artisan Ciders", "Champagnes", "Cognac & Fine Brandys", 
                      "Bundles", "Explore" ]
 
-    const mobileNav = ['Your Returns and Orders', 'Login / Create Account', 'Cart']
+    const mobileNav = [
+        {name:'Your Returns and Orders', link: 'orders'}, 
+        {name: 'Login / Create Account', link: 'profile'}, 
+        {name: 'Cart', link: 'cart'},
+        {name:'Memberships', link: 'memberships'}
+    ]
+    // const mobileNav = ['Your Returns and Orders', 'Login / Create Account', 'Cart', 'Memberships']
 
     const [navOpen, setNavOpen]= useState(false)
     return (
@@ -21,9 +27,11 @@ export default function Header (){
             <div className = {styles.header}>
                 <div className= {styles.container}>
                     <div className= {styles.top}>
+                        <Link href={'/'}>
                         <div className = {styles.imageContainer}>
                             <Image src = {'/logo.png'} alt = 'logo' fill />
                         </div>
+                        </Link>
                         
                         <div className= {navOpen? styles.activebars : styles.bars} onClick={() => setNavOpen(!navOpen)}>
                             <div></div>
@@ -70,8 +78,8 @@ export default function Header (){
                     <div className={styles.mobileNav}>
                             <ul className={styles.navList}>
                                 {mobileNav.map((item, index) => (
-                                    <Link href={'/marketplace'}>
-                                        <li key={index} className={styles.navItem}>{item}</li>
+                                    <Link href={item.link}>
+                                        <li key={index} className={styles.navItem}>{item.name}</li>
                                     </Link>
                                 ))}
                             </ul>

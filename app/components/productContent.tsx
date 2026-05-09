@@ -1,9 +1,11 @@
-import { FaInfoCircle } from 'react-icons/fa'
+'use client'
 import styles from './productContent.module.css'
 import { LuInfo } from 'react-icons/lu'
 import ProductCard from './productCard'
 import SectionTitle from './sectionTitle'
 import Link from 'next/link'
+import { useState } from 'react'
+import Image from 'next/image'
 
 const blogs = [
     {
@@ -27,12 +29,16 @@ const blogs = [
 ]
 
 export default function ProductContent() {
+
+    const [modalOpen, setModalOpen] = useState(false)
+
     return (
         <>
             <div className={styles.container}>
                 <p className = {styles.route}>Home/ Marketplace / Wines & Vintages / <span>4th street sweet red wine</span></p>
                 <div className={styles.productDetails}>
                     <div className={styles.imageSection}>
+                        <Image src={'/martell.jpg'} alt='product' fill />
                     </div>
                     <div className={styles.infoSection}>
                         <span className= {styles.category}>Wines</span>
@@ -48,7 +54,13 @@ export default function ProductContent() {
                             </div>
                         </div>
                         <button className={styles.addToCartButton}>Add to Cart</button>
-                        <span className= {styles.addInfo} title= 'See Delivery Info'>Additional Info <LuInfo/> </span>
+                        <span 
+                            className={styles.addInfo} 
+                            title='See Delivery Info'
+                            onClick={() => setModalOpen(true)}
+                        >
+                            Additional Info <LuInfo/>
+                        </span>
                     </div>
                 </div>
                 <div className= {styles.similarProducts}>
@@ -85,6 +97,33 @@ export default function ProductContent() {
                         </div>
                     </div>
                 </div>
+                {modalOpen && (
+                    <div 
+                        className={styles.modalOverlay}
+                        onClick={() => setModalOpen(false)}
+                    >
+                        <div 
+                            className={styles.modal}
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <h3>Delivery Information</h3>
+
+                            <div className={styles.modalContent}>
+                                <p>Delivery within Lagos: 1 - 3 hours</p>
+                                <p>Outside Lagos: 1 - 3 business days</p>
+                                <p>Orders placed after 9PM are delivered the next day.</p>
+                                <p>Valid ID may be required on delivery.</p>
+                            </div>
+
+                            <button 
+                                className={styles.closeButton}
+                                onClick={() => setModalOpen(false)}
+                            >
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                )}
         </>
         
     )

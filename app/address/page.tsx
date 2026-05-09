@@ -1,5 +1,3 @@
-import styles from './address.module.css'
-import AddLocation from "../components/addLocation";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import Top from "../components/top";

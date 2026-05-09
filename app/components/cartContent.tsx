@@ -20,9 +20,9 @@ type CartItem = {
 export default function CartContent() {
 
       const [cartItems, setCartItems] = useState<CartItem[]>([
-    { id: 1, name: "Hennessy VS", price: 58000, quantity: 1, image: "/4str.png" },
-    { id: 2, name: "Jameson Irish Whiskey", price: 32000, quantity: 2, image: "/4str.png" },
-    { id: 3, name: "Bacardi Rum", price: 21000, quantity: 1, image: "/4str.png" }
+    { id: 1, name: "Hennessy VS", price: 58000, quantity: 1, image: "/martell.jpg" },
+    { id: 2, name: "Jameson Irish Whiskey", price: 32000, quantity: 2, image: "/martell.jpg"  },
+    { id: 3, name: "Bacardi Rum", price: 21000, quantity: 1,  image: "/martell.jpg"}
   ])
 
   const deliveryFee = 2000

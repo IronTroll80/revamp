@@ -3,12 +3,16 @@ import styles from './homeEvent.module.css'
 import SectionTitle from './sectionTitle'
 import { LuCalendar, LuClock, LuMapPinMinus, LuPin } from 'react-icons/lu'
 
-export default function HomeEvent (){
+interface Props{
+    showTitle: boolean
+}
+
+export default function HomeEvent ({showTitle}: Props){
     return(
         <>
         
         <div className= {styles.container}>
-            <SectionTitle title='Quicklie’s Event Calendar' description='Relax on the Weekend' link='/events' />
+            {showTitle && <SectionTitle title='Quicklie’s Event Calendar' description='Relax on the Weekend' link='/events' />}
             <div className= {styles.eventSection}>
                 <div className= {styles.event}>
                     <Image src = "/eventHome.png" alt = 'event' fill />

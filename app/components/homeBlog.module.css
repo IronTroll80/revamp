@@ -47,6 +47,7 @@
 .blogSection{
     padding: 1rem;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     row-gap: 2rem;
@@ -63,6 +64,7 @@
     width: 100%;
     height: 211px;
     background-color: #6a6a6a;
+    position: relative;
     border-radius: .5rem;
 }
 

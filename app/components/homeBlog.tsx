@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import styles from './homeBlog.module.css'
+import Image from 'next/image'
 
 const blogs = [
     {
@@ -57,7 +58,9 @@ export default function HomeBlog (){
                     {
                         blogs.map((blog, index)=>(
                             <div className= {styles.blog} key={index}>
-                                <div className= {styles.imageContainer}></div>
+                                <div className= {styles.imageContainer}>
+                                    <Image src={'/eventHome.png'} alt='event' fill/>
+                                </div>
                                 <p className= {styles.tag}>{blog.tag}</p>
                                 <p className= {styles.title}>{blog.title}</p>
                                 <p className= {styles.description}>{blog.description}</p>
