@@ -54,9 +54,12 @@ export default function ProductCard() {
 
             {showToast && <Toast
                 text="Added To Cart"
-                color="#16a34a91"
+                color="#1c1c1c"
                 isOpen={showToast}
-                duration={1500}
+                duration={2500}
+                button = {true}
+                buttonContent='Go to Cart'
+                buttonLink='/cart'
                 onClose={() => setShowToast(false)}
             />
             }

@@ -1,4 +1,5 @@
 
+import Link from 'next/link'
 import styles from './toast.module.css'
 import { useEffect, useState } from 'react'
 
@@ -8,6 +9,9 @@ interface ToastProps {
     isOpen: boolean
     duration?: number
     onClose?: () => void
+    button?: boolean
+    buttonContent?: string
+    buttonLink?:string
 }
 
 export default function Toast({
@@ -15,6 +19,9 @@ export default function Toast({
     color = '#333',
     isOpen,
     duration = 3000,
+    button,
+    buttonContent,
+    buttonLink,
     onClose
 }: ToastProps) {
 
@@ -43,6 +50,7 @@ export default function Toast({
             style={{ backgroundColor: color }}
         >
             {text}
+            {button && <div className = {styles.button}>{buttonLink && <Link href={buttonLink}>{buttonContent}</Link>}</div>}
         </div>
     )
 }

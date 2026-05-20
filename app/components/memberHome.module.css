@@ -3,6 +3,7 @@
     height: 600px;
     color: var(--white);
     display: flex;
+    padding: 1rem;
 }
 
 .container{
