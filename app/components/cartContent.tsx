@@ -1,6 +1,5 @@
 'use client'
 
-import { LuMapPin, LuPlus } from 'react-icons/lu'
 import styles from './cartContent.module.css'
 import AddLocation from './addLocation'
 import SelectPayment from './selectPayment'
