@@ -1,6 +1,7 @@
 import styles from './memberDeals.module.css'
 import SectionTitle from "./sectionTitle";
 import ProductCard from './productCard'
+import { PRODUCTS } from '../lib/data';
 
 
 export default function MemberDeals() {
@@ -10,8 +11,8 @@ export default function MemberDeals() {
         <div className = {styles.container}>
             <SectionTitle title="Our Member Deals" description = "Join the club today" link = '/marketplace' />
             <div className = {styles.productContainer}>
-                {Array.from({ length: 10 }, (_, i) => (
-                    <ProductCard key={i} />
+                {PRODUCTS.map((product, index)=> (
+                     <ProductCard key={product.id} {...PRODUCTS[index]}  />
                 ))}
             </div>
            

@@ -1,6 +1,6 @@
 .container{
     max-width: 1200px;
-    margin: 2.25rem auto;
+    margin: 4rem auto;
     padding: 1rem;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .eventSection::-webkit-scrollbar{
-    display: nonea;
+    display: none;
 }
 
 .eventSection *{
@@ -35,7 +35,7 @@
     content: "";
     inset: 0;
     position: absolute;
-    background-image: linear-gradient(#00000000, rgba(0, 0, 0, 0.76));
+    background-image: linear-gradient(#00000000, rgba(0, 0, 0, 0.9));
 }
 
 .event img{

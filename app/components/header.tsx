@@ -30,7 +30,7 @@ export default function Header() {
     const [openDropdown, setOpenDropdown] = useState<number | null>(null)
 
     return (
-        <>
+        <section className={styles.section}>
             <div className={styles.header}>
                 <div className={styles.container}>
                     <div className={styles.top}>
@@ -64,7 +64,6 @@ export default function Header() {
                 </div>
             </div>
 
-            {/* ── DESKTOP NAV BAR ── */}
             <nav className={styles.desktopNav}>
                 <div className={styles.desktopNavGroup}>
                     <ul className={styles.desktopNavList}>
@@ -76,7 +75,6 @@ export default function Header() {
                             </li>
                         ))}
                     </ul>
-                    {/* Mega panel: shown when hovering the whole nav group */}
                     <div className={styles.megaPanel}>
                         <div className={styles.megaInner}>
                             {navItems.map((item, index) => (
@@ -96,7 +94,6 @@ export default function Header() {
                 </div>
             </nav>
 
-            {/* ── MOBILE NAV ── */}
             {navOpen && (
                 <div className={styles.mobileNav}>
                     <ul className={styles.navList}>
@@ -131,6 +128,6 @@ export default function Header() {
                     </ul>
                 </div>
             )}
-        </>
+        </section>
     )
 }

@@ -1,45 +1,7 @@
 import Link from 'next/link'
 import styles from './homeBlog.module.css'
 import Image from 'next/image'
-
-const blogs = [
-    {
-        tag: 'Culture',
-        title: 'Whiskey vs Cognac: What Lagos Drinks', 
-        description: `Lorem ipsum dolor sit amet consectuer adipiscing elit. Lorem ipsum dolor sit amet consectuer adipiscing elit`,
-        meta: `Feb 18, 2026 • 6 min read`
-    },
-    {
-        tag: 'Culture',
-        title: 'Whiskey vs Cognac: What Lagos Drinks', 
-        description: `Lorem ipsum dolor sit amet consectuer adipiscing elit. Lorem ipsum dolor sit amet consectuer adipiscing elit`,
-        meta: `Feb 18, 2026 • 6 min read`
-    },
-    {
-        tag: 'Culture',
-        title: 'Whiskey vs Cognac: What Lagos Drinks', 
-        description: `Lorem ipsum dolor sit amet consectuer adipiscing elit. Lorem ipsum dolor sit amet consectuer adipiscing elit`,
-        meta: `Feb 18, 2026 • 6 min read`
-    },
-    {
-        tag: 'Culture',
-        title: 'Whiskey vs Cognac: What Lagos Drinks', 
-        description: `Lorem ipsum dolor sit amet consectuer adipiscing elit. Lorem ipsum dolor sit amet consectuer adipiscing elit`,
-        meta: `Feb 18, 2026 • 6 min read`
-    },
-    {
-        tag: 'Culture',
-        title: 'Whiskey vs Cognac: What Lagos Drinks', 
-        description: `Lorem ipsum dolor sit amet consectuer adipiscing elit. Lorem ipsum dolor sit amet consectuer adipiscing elit`,
-        meta: `Feb 18, 2026 • 6 min read`
-    },
-    {
-        tag: 'Culture',
-        title: 'Whiskey vs Cognac: What Lagos Drinks', 
-        description: `Lorem ipsum dolor sit amet consectuer adipiscing elit. Lorem ipsum dolor sit amet consectuer adipiscing elit`,
-        meta: `Feb 18, 2026 • 6 min read`
-    },
-]
+import { BLOGS } from '../lib/data'
 
 export default function HomeBlog (){
     return (
@@ -56,10 +18,10 @@ export default function HomeBlog (){
                     </div>
                 <div className= {styles.blogSection}>
                     {
-                        blogs.map((blog, index)=>(
+                        BLOGS.map((blog, index)=>(
                             <div className= {styles.blog} key={index}>
                                 <div className= {styles.imageContainer}>
-                                    <Image src={'/eventHome.png'} alt='event' fill/>
+                                    <Image src={blog.image} alt='event' fill/>
                                 </div>
                                 <p className= {styles.tag}>{blog.tag}</p>
                                 <p className= {styles.title}>{blog.title}</p>
@@ -69,6 +31,7 @@ export default function HomeBlog (){
                         ))
                     }
                 </div>
+                <Link className={styles.bottomLink} href="/blogs">See all blogs →</Link>
             </div>
         </div>
         

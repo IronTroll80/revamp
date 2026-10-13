@@ -1,12 +1,30 @@
 .memberHome{
-    background-color: var(--black);
+    position: relative;
+    background-image: url('/eventHome.png');
+    background-position: center;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
     height: 600px;
     color: var(--white);
     display: flex;
     padding: 1rem;
+    margin: 4rem auto
 }
 
+.memberHome::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+    pointer-events: none;
+}
+
+
 .container{
+    position: relative;
+    z-index: 1;
     width: 100%;
     max-width: 1200px;
     display: flex;

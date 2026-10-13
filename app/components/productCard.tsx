@@ -5,24 +5,34 @@ import Image from 'next/image'
 import styles from './productCard.module.css'
 import Toast from './toast'
 
-export default function ProductCard() {
+interface ProductProps {
+
+    name: string,
+    image: string,
+    volume: string,
+    price: number,
+    oldPrice?: number,
+
+}
+
+export default function ProductCard({name, image, volume, price, oldPrice}:ProductProps) {
     const [quantity, setQuantity] = useState(0)
     const [showToast, setShowToast] = useState(false)
 
     return (
         <div className={styles.container}>
             <div className={styles.image}>
-                <Image src='/martell.jpg' alt='product' fill />
+                <Image src= {image} alt={name} fill />
             </div>
 
             <div className={styles.text}>
                 <div className={styles.top}>
-                    <p className={styles.productName}>Product Name</p>
-                    <p className={styles.volume}>75cl</p>
+                    <p className={styles.productName}>{name}</p>
+                    <p className={styles.volume}>{volume}</p>
                 </div>
 
-                <p className={styles.price}>N5,000.00</p>
-                <p className={styles.oldPrice}>N5,790.00</p>
+                <p className={styles.price}>{price.toLocaleString()}</p>
+                <p className={styles.oldPrice}>{oldPrice? oldPrice?.toLocaleString(): ' '}</p>
             </div>
 
             {quantity === 0 ? (

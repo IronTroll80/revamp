@@ -5,6 +5,7 @@ import LatestProducts from "./latestProducts";
 import ProductCard from "./productCard";
 import styles from "./shop.module.css";
 import { useState } from "react";
+import {PRODUCTS} from '@/app/lib/data'
 
 const filters = {
   sort: {
@@ -78,7 +79,7 @@ export default function Shop (){
         <>
         
         <div className={styles.container}>
-            <h3>Wines & Vintages <span onClick={()=>{setIsSidebarOpen(true)}}><LuListFilter /></span></h3>
+            <h3>ALL PRODUCTS <span onClick={()=>{setIsSidebarOpen(true)}}><LuListFilter /></span></h3>
             <p className = {styles.subtitle}>A collection of highly rated and naturally sourced wine and vintage drinks available in Nigeria</p>
             <div className = {styles.mainContent}>
                 <div className= {styles.left}>
@@ -91,7 +92,7 @@ export default function Shop (){
                             <div className={styles.filterGroup} key={filterName}>
                                 <h5 className={styles.filterTitle}>{filter.name}</h5>
                                 {'options' in filter && filter.options.map((option) => (
-                                   <> 
+                                   <div key={option.value}> 
                                     <div className={styles.filterItem} key={option.value}>
                                         <input
                                             type={option.type}
@@ -104,7 +105,7 @@ export default function Shop (){
                                         </label>
                                     </div>
                                      
-                                    </>
+                                    </div>
                                 ))}
                                 <hr/>
                             </div>
@@ -113,8 +114,8 @@ export default function Shop (){
                 </div>
                 
                 <div className={styles.productContainer}>
-                    {Array.from({ length: 10 }, (_, i) => (
-                                        <ProductCard key={i} />
+                    {PRODUCTS.map((product, index)=> (
+                                        <ProductCard key={product.id} {...PRODUCTS[index]}  />
                                     ))}
                 </div>
             </div>
