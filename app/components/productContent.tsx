@@ -6,6 +6,7 @@ import SectionTitle from './sectionTitle'
 import Link from 'next/link'
 import { useState } from 'react'
 import Image from 'next/image'
+import { PRODUCTS } from '../lib/data'
 
 const blogs = [
     {
@@ -66,8 +67,8 @@ export default function ProductContent() {
                 <div className= {styles.similarProducts}>
                     <SectionTitle title="See Similar products" description = "Fan of" link = '/marketplace'  bold = '4th Street Sweet Red Wine?'/>
                         <div className = {styles.productContainer}>
-                            {Array.from({ length: 4 }, (_, i) => (
-                            <ProductCard key={i} />
+                            {PRODUCTS.map((product, index) => (
+                            <ProductCard key={product.id} {...PRODUCTS[index]}  />
                             ))}
                         </div>
                 </div>
